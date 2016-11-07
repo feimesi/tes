@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<style>
+	.cl{height:30px; line-height: 30px; vertical-align: middle; border:1px solid red;}
+</style>
+</head>
+<body>
+	<div class="row"></div>
+<table id="example2" class="table table-bordered table-hover dataTable no-footer" role="grid" aria-describedby="example2_info">
+                    <thead>
+                      <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="需方订单号CLIENT'S PO NO.: activate to sort column descending">需方订单号<br>CLIENT'S PO NO.</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="合同编号PO NO.: activate to sort column ascending">合同编号<br>PO NO.</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="签订时间TIME: activate to sort column ascending">签订时间<br>TIME</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="签订方式BY: activate to sort column ascending">签订方式<br>BY</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="订单详情ORDER DETALLS: activate to sort column ascending">订单详情<br>ORDER DETALLS</th></tr>
+                    </thead>
+                    <tbody>
+
+                                          
+                 
+
+
+                  </tbody>
+                  </table>
+
+
+
+<script>
+	$(function(){
+		$.get('http://121.43.192.125:8082/JasonServer/JS_Order.aspx',{'type':'ddd'}, function(data){
+			var html = '';
+			$.each(data['ZListWo'], function(i,v){
+				html+='<tr role="row" class="odd"><td class="sorting_1">ECDF34/D-43</td><td>ECDF34/D-43</td><td>'+v['Wo_key']+'</td><td>--</td><td><a class="details" href="/Home/Order/show/id/11.html">详情</a><a class="details" href="/Home/Order/jindu/id/11.html">生产进度</a></td></tr>';
+			});
+			$('tbody').html(html);
+		},'json');
+	});
+
+</script>
+
+
+</body>
+</html>
