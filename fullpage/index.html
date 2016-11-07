@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fullpage test 0120 zf</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<link rel="stylesheet" type="text/css" href="style/jquery.fullPage.css" />
+	<script src="style/jquery-1.9.1.min.js"></script>
+	<script src="style/jquery-ui.min.js"></script>
+	<!-- jquery.easings.min.js 用于 easing 参数，也可以使用完整的 jQuery UI 代替，如果不需要设置 easing 参数，可去掉改文件 -->
+    <script src="style/jquery.easings.min.js"></script>
+	<script type="text/javascript" src="style/jquery.fullPage.min.js"></script>
+	<!-- 如果 scrollOverflow 设置为 true，则需要引入 jquery.slimscroll.min.js，一般情况下不需要 -->
+	<script type="text/javascript" src="style/jquery.slimscroll.min.js"></script>
+	<style type="text/css">
+	.section{text-align:center;overflow:hidden;}
+	#fp-nav ul li .fp-tooltip{color: #000000} /*设置圆点说明文字的颜色*/
+	.timg{width: 100%;height: 120%;}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				'verticalCentered': false, //内容是否垂直居中
+				'css3': false, //css3效果开关，反开关，关闭后页面滚动有过度效果，打开没有
+				'loopTop': false,   //顶部开关，顶部可返回底部  默认关
+				'loopBottom': true,  //底部开关，底部可返回到顶部
+				'scrollOverflow': false,  //内容超过满屏后是否显示滚动条,否则超出部分不显示
+				'sectionsColor': ['#00FFCC', '#6666CC', '#eee', '#CC66CC','#FFFF99','#FF33CC'],  //每帧的背景颜色
+				'navigation': false,  //圆点导航开关
+				'navigationPosition': 'right',  //圆点导航位置
+			    'navigationTooltips': ['第一屏', '第二屏', '第三屏', '第四屏', '第五屏', '第六屏'], //圆点导航的说明文字，可不要
+			});
+		});
+	</script>
+</head>
+<body>
+<div id="fullpage">
+	<div class="section " id="section0">
+
+	<!-- <img src="./examples/imgs/bg2.jpg" class="timg"> -->
+<!-- 	<div style="width:100%;height:80%;background-color:red"></div>
+	<p>Eu nec ferri molestie consequat, vel at alia dolore putant. Labore philosophia ut vix. In vis nostrud interesset appellantur, vis et tation feugiat scripserit. Te nec noster suavitate persecuti. Diceret erroribus cu vix, alii omnes ei sit. Sea an corrumpit patrioque, virtute accumsan nominavi et usu, ex mei dolore vocibus incorrupte. Duo ea saperet tacimates. Sed possim prodesset no, per novum putent doctus ea. Eu mea magna aliquip graecis, pri corpora officiis complectitur ei, lorem saepe consetetur his ad. Meis consulatu ei vis, an altera ocurreret interesset qui. Eu ponderum comprehensam his, case antiopam pri te. Mel ne partem consequat instructior. Ad dicunt malorum sea, ex qui omnes invenire gubergren. Ius cu autem aliquando, pri vide ornatus perpetua an, no has epicuri verterem. Nam at animal pertinax efficiantur. Per alienum torquatos eu. Sed saepe quodsi et, ullum choro definitionem sed et. Ullum elitr comprehensam sed at, sint illum propriae per eu. Eu enim laudem reformidans vel. Pro clita quando ad. Usu te virtute quaestio, ut eruditi tacimates volutpat per. Affert accusamus duo ex, ea pri habeo graece, cu magna dolorum sea. Quas dictas assueverit ad qui, cu duo harum fabulas apeirian, ullum gubergren et sit. Ne cetero recusabo adipiscing quo, cu harum quaestio neglegentur cum. Has tation aliquip ad, virtute volumus definitionem mel ne. Nobis audiam civibus ius at. Ei eum hinc mutat inciderint. Cu maluisset assentior per, graecis ponderum no mel. Eum eu vitae quando gloriatur, cum graece percipitur no, sed errem maiestatis te. Sed porro epicuri te, ad nam malorum verterem. Ea zril aliquip euismod sed.ullum choro definitionem sed et. Ullum elitr comprehensam sed at, sint illum propriae per eu. Eu enim laudem reformidans vel. Pro clita quando ad. Usu te virtute quaestio, ut eruditi tacimates volutpat per. Affert accusamus duo ex, ea pri habeo graece, cu magna dolorum sea. Quas dictas assueverit ad qui, cu duo harum fabulas apeirian, ullum gubergren et sit. Ne cetero recusabo adipiscing quo, cu harum quaestio neglegentur cum. Has tation aliquip ad, virtute volumus definitionem mel ne. Nobis audiam civibus ius at. Ei eum hinc mutat inciderint. Cu maluisset assentior per, graecis ponderum no mel. Eum eu vitae quando gloriatur, cum graece percipitur no, sed errem maiestatis te. Sed porro epicuri te, ad nam malorum verterem. Ea zril aliquip euismod sed.</p> -->
+	</div>
+	<div class="section " id="section1">
+	第二屏
+	</div>
+	<div class="section " id="section2">
+		<div class="slide">第三屏的第一屏</div>
+        <div class="slide">第三屏的第二屏</div>
+        <div class="slide">第三屏的第三屏</div>
+        <div class="slide">第三屏的第四屏</div>
+	</div>
+	<div class="section " id="section3">
+	第四屏
+	</div>
+	<div class="section " id="section4">
+	第五屏
+	</div>
+	<div class="section " id="section5">
+	第六屏
+	</div>
+</div>
+</body>
+</html>
